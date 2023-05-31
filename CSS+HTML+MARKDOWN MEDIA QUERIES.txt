@@ -1,0 +1,181 @@
+/*CSS MEDIA QUERIES,how websites to width of devices viewport*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+    
+}
+
+/* || GENERAL STYLES */
+body{
+   
+    font: 1.5rem "Nunito",sans-serif;
+    min-height: 100vh;
+    background-color: #475569;
+    background-image: radial-gradient(whitesmoke,#475569);
+    display: flex;
+    flex-direction: column;
+    
+
+}   
+
+header,nav,main,footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+
+}
+
+header,footer{
+    position: sticky;
+    background-color: #1E2938;
+    color: whitesmoke;
+
+
+}
+header{
+    top:0;/*stuck to top*/
+}
+nav{
+    background-color: #fff;
+    color:black;
+    padding: 0.5rem;
+    border-bottom: 2px solid #000;
+
+
+}
+main{
+    flex-grow: 1;
+}
+footer{
+    bottom: 0;/*stuck to bottom*/
+}
+
+
+/* Syntax: */
+/* @media media type and (condition: breakpoint) {
+    //CSS RULES
+    
+} */
+
+/* || SMALL */
+@media screen and (min-width: 576px) {
+    body{
+        background-color: green;
+        background-image: radial-gradient(whitesmoke,green);
+    }
+    nav{
+        display:none;
+    }
+}
+
+/* || MEDIUM */
+@media screen and (min-width: 760px) {
+    body{
+        background-color: gold;
+        background-image: radial-gradient(whitesmoke,gold);
+    }
+    /* nav{
+        display:none;
+    } */
+}
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+    body{
+        background-color: firebrick;
+        background-image: radial-gradient(whitesmoke,firebrick);
+    }
+   
+}
+
+/* || XL */
+@media screen and (min-width: 1200px) {
+    body{
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke,rebeccapurple);
+    }
+   
+
+}
+
+
+/* || MOBILE DEVICE LANDSCAPE */
+@media screen and (min-width: 425px) and (min-aspect-ratio: 7/4){
+    body{
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke,dodgerblue);
+    }
+    h1,h2{
+        font-size: 1.5rem;
+    }
+    nav{
+        display: none;
+    }
+}
+..........................................................................................................................
+### Common Media Query breakpoints:
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 481px | Mobile devices |
+| 481px — 768px | iPads, Tablets |
+| 769px — 1024px | Small screens, laptops |
+| 1025px — 1200px | Desktops, large screens |
+| 1201px and greater | Extra large screens, TV |
+ 
+### Bootstrap breakpoints:
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 576px | xs |
+| >=576px | small |
+| >=768px | medium |
+| >=992px | large |
+| >=1200px | xl |
+| >=1400px | 2xl |
+
+### Tailwind breakpoints:
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 640px | xs |
+| >=640px | small |
+| >=768px | medium |
+| >=1024px | large |
+| >=1280px | xl |
+| >=1536px | 2xl |
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+     
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+       
+<body>
+    <header>
+        <h1>Header</h1>
+        <nav><h2>Nav</h2></nav>
+    </header>
+          
+    <main>
+        <h2>Main</h2>
+    </main>
+        
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+</body>
+      
+</html>
+
+<!-- ctrl shift v to see markdown preview -->

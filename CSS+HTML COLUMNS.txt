@@ -1,0 +1,73 @@
+/*CSS COLUMNS*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/*earlier were used to create columns on pg,but now we hv flex and grid,now we are using it to float ,can use it inside of container but remember to use flow-root so that it avoids sizing according to content length*/
+
+body{
+    font-size: 1.5rem;
+    font-family: "Roboto",sans-serif;
+}
+
+.columns{
+    /* column-count: 4;
+    column-width: 250px; */
+    columns: 4 250px;/*same as above two lines*/
+    column-rule: 3px solid rgb(0, 0, 0);
+    column-gap: 3rem;
+
+}
+.columns p{
+    /*this is more specific than quote class*/
+    margin-top: 0;/*removes top margin of first para but not other para top margin*/
+
+}
+.columns h2{
+    /*h2 inside columns container/section*/
+    margin-top: 0;
+    background-color: black;
+    color:white;
+    padding:1rem;
+    break-inside: avoid;/*suppose the browser size is small,so the background will break and may appear in 2 columns so this avoids that*/
+    /* break-before: column;not good to use,as would browser to break content in columns f the size is shrinked */
+
+}
+/*for quotes or unicode character go to unicode character table*/
+.columns .quote{
+    /*as its specificity is less than columns p so the margin top of quote does not apply so we need columns quote class so we rename it */
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    column-span:all;
+    margin-top: 2rem;
+}
+.nowrap{
+    /*this does not breaks author name,it stays in one line*/
+    white-space: nowrap;
+}
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Columns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- section referred to container here -->
+    <section class="columns">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio incidunt laudantium vel ex id adipisci, excepturi debitis repellendus esse voluptates!</p>
+        <p>Incidunt fuga ipsa, porro quae pariatur ipsam excepturi natus eum, molestias maiores quod quis explicabo animi tempore laudantium inventore tempora!</p>
+        <!-- <h2>Next Topic</h2> -->
+        <p class="quote">&#8220;Where's my rug,man?&#8221; <span class="nowrap">&#8212;The Dude</span></p>
+        <!-- &#8220; is from unicode character table website,it is opening quotation mark-->
+        <p>Quasi porro error quis voluptas eos dolores illo minus neque magni dolore odit aut excepturi, culpa eveniet nam possimus! At.</p>
+        <p>Deserunt at dolorum nihil, mollitia veniam dolorem reiciendis labore est ipsa sapiente earum incidunt ipsam! Deserunt velit magnam consequuntur illo?</p>
+    </section>
+    <p>Voluptatum ut unde, repellendus error consequatur deleniti officiis debitis nihil ipsa, a quia neque est eveniet quis autem? Exercitationem, quas!</p>
+</body>
+
+</html>

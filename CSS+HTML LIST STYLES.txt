@@ -1,0 +1,117 @@
+/*LIST STYLES*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    padding:5% 10%;
+    font-family: 'Roboto',sans-serif;
+    font-size: 2rem;
+}
+ol{
+    /* list-style-type:decimal-leading-zero;sets bullets to decimal-leading-zero,by default for ol it is decimal */
+    /* list-style-type: disc;disc makes it look like unordered list by giving circular bullets,none removes bullet but list will still be indented,padding can be set to 0 to remove indent*/
+    /* list-style-type: upper-roman; */
+
+    list-style-type: lower-alpha;
+    padding: 0%;
+}
+ul{
+    list-style-type: square;/*square bullets*/
+    text-align: center;/*the bullets won't align with it they will stay outside*/
+list-style-position: inside;/*by default it is outside so by default bullets do not align with text*/
+color: blue;
+line-height: 1.6;
+/* list-style-image: url('img/checkmark.png'); */
+/* .. to get out of css folder ,if img folder is out of css folder ,NOTE:yeh dono lge the img wala b or neeche style wala b*/
+/* list-style: square url('img/checkmark.png') inside; */
+/*here we give two styles square,url if img does not load then sq can appear,inside aligns img with text,can provide list style img,position,type together*/
+}
+
+
+/* ul li{
+    this overrides ul ,ol,sets list element color to red
+    color: red;
+    write ul li if want to apply red to ul list items
+} */
+
+ul li:nth-child(2){
+    /*this is pseudoclass as clear it uses colon :,this sets 2nd child or list item of unordered list red,instead of 2 u can write even odd */
+    color: red;
+}
+ul ::marker{
+    /*pseudo element not class,starts with 2 colons ::,you put svg or fontawseome icons as marker*/
+     color:red;
+     font-family: fantasy;
+     font-size: 1em;
+     content: "Only $5 >> ";/*it applies to both ul ,ol.so specify ul or ol as ul::marker or ol::marker*/
+}
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>CSS Lists</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Ordered List</h2>
+            <ol start="5"  reversed><!--start reversed will make the counting start from 3 and it will go down as it is reversed,if not reversed it goes higher starting from 3-->
+                <li>Step One</li>
+                <li value="26">Step Two</li> <!--due to start=26 it becomes 26 and then reverses from here to y for step 3-->
+                <li>Step Three</li>
+            </ol>
+        </article>
+        <article>
+            <h2>Unordered List</h2>
+            <ul>
+                <li>Step One</li>
+                <li>Step Two</li>
+                <li>Step Three</li>
+            </ul>
+        </article>
+    </main>
+</body>
+
+</html>
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page One</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Page One</h1>
+</body>
+
+</html>
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Two</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Page Two</h1>
+</body>
+
+</html>

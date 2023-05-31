@@ -1,0 +1,66 @@
+/*CSS FLOATS*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/*earlier were used to create columns on pg,but now we hv flex and grid,now we are using it to float ,can use it inside of container but remember to use flow-root so that it avoids sizing according to content length*/
+
+body{
+    font-size: 1.5rem;
+    font-family: "Roboto",sans-serif;
+}
+.block{
+    width: 30vw;
+    height: 30vw;
+    background-color: black;
+    color:white;
+    padding: 1rem;
+
+}
+.left{
+    /* this makes the text wrap to left of block we created */
+    float: left;
+    margin-right: 1rem;
+}
+.right{
+    /* this makes the text wrap to right of block we created */
+    float:right;
+    margin-right: 1rem;
+}
+
+.clear{
+    /*this class in div after 1st para makes sure that 2nd para does not wrap or start immediately after first on right of block,it starts after 1st div,important bcz without this if suppose we hv less text in para1 the 2nd para text will wrap up,but this doesn't even container size down or increase,so use overflow in section*/
+    clear:both;
+}
+section{
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 1.5rem;
+    /* overflow: auto;cntainer will now extend down to contain the entire element,but now the correct way to do so is as line 38 ,now we hv even removed clear class from html*/
+    display: flow-root;
+
+}
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Floats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+      <div class="block left">Float</div><!--two classes applied on div-->
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+</section>
+    <!-- <div class="clear"></div> -->
+    <p>Quasi ipsam ea ad dolores eum quibusdam? Qui saepe nobis eos cupiditate deserunt. Quo minus quam labore, id facilis tempora.</p>
+    <p>Earum veniam omnis voluptas debitis excepturi et, nemo nostrum, rerum sequi necessitatibus corporis laborum quia fuga dignissimos nam neque esse!</p>
+    <div class="block right">Float</div>
+    <p>Iste, ipsa natus, perferendis minus veritatis esse modi, iure beatae eius molestias tempore voluptatem dicta nam harum ratione autem quas.</p>
+    <p>Earum fugiat temporibus nulla magnam, maiores ratione illo asperiores laudantium maxime, minima voluptatum! Sequi sint quia blanditiis optio cumque aspernatur.</p>
+</body>
+
+</html>

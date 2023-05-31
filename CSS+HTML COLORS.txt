@@ -1,0 +1,89 @@
+/* COLORS */
+body{
+    font-size:22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: papayawhip;
+    /* write background or background-color: ; both work*/
+    /* color:darkblue; */
+    /* color:rgb(255,0,0); */
+    color:rgb(0,0,0);
+    /* color sets font color */
+}
+p{
+    /* color:rgba(0,0,0,1); */
+    /* a is alpha channel,it has value from 0 to 1,sets transparency in text,1 means that alpha channel isn't there-full black,0 makes para transparent or blank,we can also set custom transparency like below 50% text ransparency is set*/
+    /* color:rgba(0,0,0,0.5); */
+
+    /* BELOW IS HEXADECIMAL CODING OF COLORS YOU CAN HAVE RGB COLORS BY PUTTING FF0000,00FF00,0000FF AND ALSOMORE COLORS */
+    /* color:#FF0000; or its shorthand but only few hv shorthand ff0 means red*/
+
+    /* color:hsl(0, 100%, 50%); */
+    /* hsl-hew,saturation,lightness */
+    
+    color:#333;
+    /* coolors is a source for picking color palettes,checking contrast */
+    /* web aim also checks contrast */
+}
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css"><!--external style sheet-->
+
+    <!-- <style>
+        p{
+            color: limegreen;
+        }
+    </style> -->
+    <!--this is internal style sheet,it does not take precedence over external one,here we saw limegreen instead of purple bcz we linked external style sheet above so it was read b4 but then internal style was read with limegreen color so it applied that,its not precedence-->
+
+</head>
+<body>
+    <!-- <p style="color:blue">I'm learning CSS!</p> -->
+    <!--in line style as attribute is 3rd type of doing css it takes precedence over internal and external style sheet as it is applied directly to element,it should be avoided-->
+    <header>
+        <h1>CSS Selectors</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Article 1</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam cumque voluptatum tempore officiis
+                deserunt
+                officia, molestias tenetur tempora. Numquam assumenda eligendi ipsam ut quibusdam ex autem placeat
+                deleniti
+                hic optio?</p>
+        </article>
+        <article>
+            <h2>Article 2</h2>
+            <p id="second" class="gray">Iste, possimus, delectus blanditiis, in dolores voluptatem culpa officia quae
+                eius
+                consequatur
+                suscipit optio
+                cum hic. Architecto ipsum rem accusamus! Quaerat repellendus <span class="highlight">nihil</span>
+                ratione tenetur voluptas
+                veritatis,
+                sunt
+                nesciunt rem.</p>
+        </article>
+        <article>
+            <h2>Article 3</h2>
+            <p class="gray">Iste, possimus, delectus blanditiis, in dolores voluptatem culpa officia quae eius
+                consequatur
+                suscipit optio
+                <!-- cum hic. Architecto <span class="highlight">ipsum</span> rem accusamus! Quaerat repellendus nihil -->
+                cum hic. Architecto <span class="highlight">ipsum</span> rem accusamus! Quaerat repellendus nihil
+                ratione tenetur voluptas
+                veritatis,
+                sunt
+                nesciunt rem.</p>
+        </article>
+    </main>
+    
+</body>
+</html>

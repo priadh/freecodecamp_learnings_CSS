@@ -1,0 +1,143 @@
+
+/* p is selector ,color and  font size are property ,purple and 64px is property value,they together are declaration  ,whole block is called rule or ruleset*/
+
+/* * {
+    universal selector,selects all elements but is not inherited by every other blocks
+    font-family: monospace;
+    border: 1px solid red;
+} */
+
+html{
+    font-size: 22px;
+}
+
+body{
+    /* font-size: 22px; */
+    background-color: black;
+
+    /* this is inherited by others ,can also use html instead of body ,either works*/
+}
+/* only one body element per pg */
+
+/* NOTE:DOWN FROM HERE TILL #second ARE ALL SELECTORS ALONG WITH * OR UNIVERSAL SELECTOR*/
+
+main{
+    font-family: monospace;
+}
+
+button,input,textarea,select{
+    font:inherit;
+    /* form elements do not inherit font settings */
+}
+
+
+
+h1,h2{
+    /* this will set both h1,h2 blue */
+    color: blue;
+}
+
+/* h1 h2{
+    /* this will set both h2 present in h1 as blue but h1 will remain same*/
+    /* color: blue; */
+/* } */ 
+
+p{
+    /* p is paragraph selector or element selector*/
+    /* font-size: 64px; sets font of all paras on pg */
+     color:purple;
+     /* color: purple !important;
+     don't use important ,it overwrites everything,not a good organization of code */
+}
+
+p{
+    /*last read so turns red,overwrites purple*/
+    color: red;
+}
+
+/* p span{
+    there might be some other span elements doing something else that may not be just for highlighting so instead of span in html create class highlight
+    text-transform: uppercase;
+    background-color: gold;
+} */
+
+.highlight{
+    /* this makes it reusable ,an element can have more than one class*/
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+.gray{
+  /* this is a second type of selector called class selector 
+  class can be used more than once like in our html class gray is used twice,this has more specificity than element selector,even if you put it above p selector the paras will stay grey
+  */
+  color:gray;
+}
+
+#second{
+    /* id selector,in our code this sets second para to italics ,this should be unique or occur once in html,don't use it often,use class or element selectors,even more specific than class*/
+    font-style: italic;
+}
+...................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css"><!--external style sheet-->
+
+    <!-- <style>
+        p{
+            color: limegreen;
+        }
+    </style> -->
+    <!--this is internal style sheet,it does not take precedence over external one,here we saw limegreen instead of purple bcz we linked external style sheet above so it was read b4 but then internal style was read with limegreen color so it applied that,its not precedence-->
+
+</head>
+<body>
+    <!-- <p style="color:blue">I'm learning CSS!</p> -->
+    <!--in line style as attribute is 3rd type of doing css it takes precedence over internal and external style sheet as it is applied directly to element,it should be avoided-->
+    <header>
+        <h1>CSS Selectors</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Article 1</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam cumque voluptatum tempore officiis
+                deserunt
+                officia, molestias tenetur tempora. Numquam assumenda eligendi ipsam ut quibusdam ex autem placeat
+                deleniti
+                hic optio?</p>
+        </article>
+        <article>
+            <h2>Article 2</h2>
+            <p id="second" class="gray">Iste, possimus, delectus blanditiis, in dolores voluptatem culpa officia quae
+                eius
+                consequatur
+                suscipit optio
+                cum hic. Architecto ipsum rem accusamus! Quaerat repellendus <span class="highlight">nihil</span>
+                ratione tenetur voluptas
+                veritatis,
+                sunt
+                nesciunt rem.</p>
+        </article>
+        <article>
+            <h2>Article 3</h2>
+            <p class="gray">Iste, possimus, delectus blanditiis, in dolores voluptatem culpa officia quae eius
+                consequatur
+                suscipit optio
+                <!-- cum hic. Architecto <span class="highlight">ipsum</span> rem accusamus! Quaerat repellendus nihil -->
+                cum hic. Architecto <span class="highlight">ipsum</span> rem accusamus! Quaerat repellendus nihil
+                ratione tenetur voluptas
+                veritatis,
+                sunt
+                nesciunt rem.</p>
+        </article>
+    </main>
+    
+</body>
+</html>
+..........................................................................................................................

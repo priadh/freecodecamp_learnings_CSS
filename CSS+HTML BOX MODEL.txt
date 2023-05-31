@@ -1,0 +1,107 @@
+/* CSS BOX MODEL*/
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: content-box; */
+    /* if we use the content box then the width of content is exact 400px it does not account for padding or border but if we use a border box 400px will be addidion of content+padding+border,by default it is content box*/
+    /* margin is out of css boxes so not included */
+     box-sizing: border-box;
+}
+
+    /* if we want to apply same header settings on para which is in main,so better if we use class here as shown below*/
+.container{
+    border: 10px double red; /*by default 3px,can hv dashed,outset,double,ridge as styles or even more*/
+
+    /*can break down and specify separately as below*/
+    /* border-top-width: 5px; */
+    /* border-top-style: ridge;
+    border-top-color: blue; */
+    /* border-top: 5px solid green; */
+    /* border-right: 10px dotted blue; */
+    font-size: 1.5rem;
+    /* width: 400px; */
+     /* margin:1.5em 2em;  short cut for margin applies margin in order top right bottom left here it applies 1.5em to top bottom and 2em to left right ,u can also provide all 4 sizes,same can be done with padding */
+     margin: 1.5rem;
+
+    /* margin-top: 1.5em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em; */
+    padding:1.5em ;
+    /* 1em=1.5rem font-size: ; */
+
+    outline: 5px solid purple;/*it is not calculated in box model as it does not take space*/
+    /* outline-offset: 5px;pushes outline 5px away from border,can put -ve value to push the outline inside of box */
+    outline-offset: -20px;
+}
+
+
+/* header{ */
+    /* it is better to have h1 in container since h1 is in header put settings in header */
+    /* border: 2px dashed red; */
+
+   /* width: 50%; sets border width **/
+   /* width: 400px; */
+   /* font-size: 3rem; */
+   /* padding: 0.5em; **/
+   /* padding:1.5rem; */
+   /* rem instead of em as we are not setting it on header */
+/* } */
+/* h1{
+    here we use absolute size or pixels no matter what screen size is the border size remains same
+   border: 2px dashed red;
+   width: 50%; sets border width
+   width: 400px;
+   font-size: 3rem;
+   padding: 0.5em;
+   paddding is 0.5 of font-size:  i.e. 48px*0.5=24px ,em calculated using font-size
+}
+   */
+
+   /*TURN BOX TO CIRCLE*/
+.circle{
+        margin: 3rem auto; /*auto to set margin for left and right,it centers the box*/
+        background-color: gold;
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        border-radius: 50px;
+        outline: 2px solid red;
+        outline-offset: 0.25rem;
+   }
+   .......................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- ctrl+b to hide file tree -->
+<body>
+    <header class="container">
+        <h1>CSS Box Model</h1>
+    </header>
+    <main class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laudantium exercitationem corporis quia
+            dolores esse enim? Necessitatibus quisquam, magni iste beatae earum et fugiat aut delectus porro voluptate,
+            praesentium totam?</p>
+            <div class="circle"></div>
+            <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident mollitia, unde aut commodi, neque vero quos sapiente, maiores maxime delectus reiciendis facilis? Unde dignissimos quibusdam officia sunt voluptatibus debitis atque?</p>
+            <p>Non necessitatibus eligendi, provident esse, ut cumque, tempora veniam vitae quaerat deserunt nulla nam! Ab officia corrupti, veniam, asperiores, porro alias at facere aspernatur commodi reiciendis voluptatem repellendus reprehenderit eius.</p>
+            <p>Aliquid, explicabo enim dignissimos atque veniam consectetur voluptatum eligendi repudiandae reprehenderit ab excepturi error illo minima iure cupiditate obcaecati doloribus inventore exercitationem! Dicta assumenda ullam suscipit molestiae fugiat, quas aliquid!</p>
+            <p>Labore esse autem odit quod eaque, possimus quas nisi aliquam quos deserunt necessitatibus sunt eos eligendi molestias enim sint praesentium ad debitis suscipit laudantium beatae eveniet quia rerum. Porro, cupiditate?</p>
+            <p>Esse, blanditiis. Reiciendis inventore dolorum dolorem dolores. Consequatur cum suscipit pariatur nam quod, voluptas velit debitis, eligendi tempore quia ullam optio nihil corrupti ea at omnis quo aliquam labore laborum!</p>
+            <p>Similique error at eaque expedita numquam reprehenderit nostrum esse qui. Esse, sint ad illo consectetur commodi pariatur, deserunt ratione doloribus molestias dolor hic voluptas? Nobis quisquam illo enim exercitationem animi.</p>
+            <p>Sapiente eos sed nobis ea reiciendis dolore atque repudiandae, necessitatibus praesentium delectus quidem impedit commodi! Ducimus, hic. Voluptatum eligendi voluptatem amet corporis! Ad quisquam autem nostrum porro molestiae impedit delectus.</p>
+            <p>Ullam unde minima assumenda, excepturi blanditiis reprehenderit quos error sunt natus animi quidem quasi veritatis eos voluptatibus consectetur distinctio quas explicabo consequatur expedita doloremque adipisci. Odio esse molestias perferendis architecto?</p>
+            <p>Eligendi animi minima adipisci optio consectetur saepe incidunt ab nemo odio, aut sunt molestiae numquam sit earum placeat ipsam voluptas, debitis, eos officia expedita modi sint. Iure itaque dolorem sit?</p>
+            <p>Quidem laudantium nisi, dignissimos quos perspiciatis asperiores dolorem nesciunt optio ea aut quisquam! Odio ratione, perferendis fugit, qui amet perspiciatis quo tempore vitae voluptas maxime, corrupti molestias aperiam doloribus provident.</p> -->
+<!-- p*10>lorem press tab adds lorem text -->
+    </main>
+</body>
+
+</html>

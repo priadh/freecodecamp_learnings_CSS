@@ -1,0 +1,58 @@
+/*DISPLAY*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body{
+    font-size: 2rem;
+    font-family: "Roboto",sans-serif;
+}
+main{
+    /*since para is in main it now takes just 50% of width*/
+    background-color: aqua;
+    /* width: 50%; */
+}
+p{
+    /*this block level element so it has 100% width by default,has default margin,this is true for each block level elements,main is also block level element*/
+    background-color: lightgray;
+    /* margin: 100px 50px; */
+}
+.opposite{
+    display: inline-block;
+    /*inline block comes handy when want to design links as buttons or turning list in row rather than vertical*/
+    background-color: black;
+    color: whitesmoke;
+    /* margin-top: 100px;
+    height: 200px; they oth cannot be applied to inline elements and span is inline element on which this class is applied so change it to inline block to apply it*/
+    margin-top: 100px;
+    height: 200px;
+    padding: 1rem;
+}
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- <p>This is a paragraph.</p>
+        <p>This is <span class="opposite">another</span> paragraph.</p> -->
+        
+        <nav>
+            <ul>
+                <li><a href="#">Intro</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+        
+    </main>
+</body>
+
+</html>
+..........................................................................................................................

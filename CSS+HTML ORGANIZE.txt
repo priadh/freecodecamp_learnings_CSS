@@ -1,0 +1,133 @@
+/* ORGANIZE */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+}
+
+/* || VARIABLES */
+
+:root {
+  /* COLORS */
+  --HEADER-BGCOLOR: #333;
+  --HEADER-COLOR: whitesmoke;
+}
+
+/* || UTILITY CLASSES */
+
+.underline {
+  text-decoration: underline;
+}
+
+/* || GENERAL STYLES */
+
+html {
+  font-size: 2.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  /* justify-content: center;
+  gap: 1em; */
+  flex-flow: column nowrap; 
+  display: flex;
+  /* align-items: center; */
+}
+
+/* || BLOCKS */
+/* aka components */
+
+.header{
+  background-color: var(--HEADER-BGCOLOR);
+  color: var(--HEADER-COLOR);
+  padding: 1rem 1em 0.5rem;
+  display: flex;
+  /* gap: 1em; */
+  flex-flow: row nowrap;
+  justify-content: space-between;
+   
+
+}
+
+.btn {
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 15px;
+
+}
+
+
+/* || ELEMENTS */
+/* No standalone meaning - semantically tied to the block */
+/* Does not represent structure, NOT header__nav__btn */
+.header__btn {
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 15px;
+
+}
+
+/* .header button */
+
+/* || MODIFIERS (--)*/
+/* incremental style changes */
+
+/* Blocks with modifiers */
+
+.header__btn--secondary {
+  background-color: yellow;
+}
+
+.header__btn--lean {
+  transform: skewX(-10deg); 
+}
+
+.header__btn--border-lg {
+  border: 5px solid whitesmoke;
+}
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Naming Convention</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">BEM</h1>
+        <nav class="header__nav">
+    <button class="header__btn">🚀</button>
+    <button class="header__btn header__btn--secondary">🔥</button>
+    <button class="header__btn header__btn--lean header__btn--border-lg header__btn--secondary">🌮</button>
+    </nav>
+  </header>
+</body>
+
+</html>
+
+<!--header__btn btn dependent on header-->
+..........................................................................................................................
+## Suggestions to Organize Your CSS
+
+-- Follow Your Team
+
+-- Use comments to create headers 
+
+-- Sort properties alphabetically ABCSS
+
+-- Larger projects follow a naming convention methodology. For example: BEM - Block, Element, Modifier
+

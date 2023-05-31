@@ -1,0 +1,191 @@
+/* VARIABLES */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+     /* COLOR ,uppercase used here bcz bgcolor is constant here,two variables can hv same value*/
+     --BGCOLOR:#475569;
+     --ALTBGCOLOR:#1E293B;
+     --RADIAL-COLOR:whitesmoke;
+     --LIGHT-COLOR:whitesmoke;
+     --DARK-COLOR:black;
+
+       /* FONT */
+       --FF:"Nunito", sans-serif;
+       --FS:1.5rem;
+       --FS-XL:3rem;
+
+       /* SQUARE */
+       --SQUARE-BGCOLOR:papayawhip;
+       --SQUARE-SIZE:max(150px,20vw);
+
+       /* GENERAL */
+       --PADDING:-0.5rem;
+       --SHADOWS:0 6px 5px -5px var(--DARK-COLOR);
+       --BORDERS:2px solid var(--DARK-COLOR);
+
+}
+
+/*BELOW IS LIGHT DARK MODE PREFERENCE,IF U PUT LIGHT INSTEAD OF DARK IT WON'T TURN DARK and this is a custom dark mode it changes according to ur windows or mac pc settings*/
+@media(prefers-color-scheme:dark){
+  :root{
+    --BGCOLOR:black;
+    --ALT-BGCOLOR:#333;
+    --RADIAL-COLOR:rgb(217, 217, 217);
+    --SQUARE-BGCOLOR:rgb(202, 174, 202);
+  }
+}
+
+/* || GENERAL STYLES */
+body {
+  font: var(--FS) var(--FF);
+  min-height: 100vh;
+  
+  background-color: var(--BGCOLOR);
+  /*var(--bgcolor) is variable name that we created*/
+  background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+nav,
+footer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: var(--ALTBGCOLOR);
+  color: var(--LIGHT-COLOR);
+
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  background-color: var(--LIGHT-COLOR);
+  color: var(--DARK-CLOR);
+  padding: var(--PADDING);
+  border-bottom: var(--BORDERS);
+  box-shadow: var(--SHADOWS);
+}
+
+main {
+  flex-grow: 1;
+  
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: min(4vw,15px);
+
+}
+
+footer {
+  bottom: 0;
+}
+
+/* || FEATURES */
+
+.square--highlight{
+  --SQUARE-BGCOLOR:cornflowerblue;
+  /*redifining var,only applies to div having this class square--highlight*/
+}
+
+.square{
+  background-color: var(--SQUARE-BGCOLOR);
+  width:var(--SQUARE-SIZE);
+  height: var(--SQUARE-SIZE);
+  border: var(--BORDERS);
+  border-radius: 15px;
+  display:grid;
+  place-content: center;
+  font-size: var(--FS-XL);
+  box-shadow: var(--SHADOWS);
+}
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Header</h1>
+        <nav>
+            <h2>Nav</h2>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <h2>Main</h2> -->
+        <div class="square"><p>Hey</p></div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square square--highlight">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+        <div class="square">💻</div>
+    </main>
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+</body>
+
+</html>
+..........................................................................................................................
+### Common Media Query breakpoints:
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 481px | Mobile devices |
+| 481px — 768px | iPads, Tablets |
+| 769px — 1024px | Small screens, laptops |
+| 1025px — 1200px | Desktops, large screens |
+| 1201px and greater | Extra large screens, TV |
+
+### Bootstrap breakpoints:
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 576px | xs |
+| >=576px | small |
+| >=768px | medium |
+| >=992px | large |
+| >=1200px | xl |
+| >=1400px | 2xl |
+
+### Tailwind breakpoints:
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 640px | xs |
+| >=640px | small |
+| >=768px | medium |
+| >=1024px | large |
+| >=1280px | xl |
+| >=1536px | 2xl |

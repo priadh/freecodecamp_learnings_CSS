@@ -1,0 +1,104 @@
+/*CSS GRID LAYOUT,learn more about it on grid garden website*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    /* font-size: 1.5rem; */
+    font-family: "Roboto",sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-auto-rows: 50px auto 50px;
+    grid-template-areas: "hd hd hd hd hd hd hd hd hd "
+    "mn mn mn mn mn mn mn sb sb"
+    "ft ft ft ft ft ft ft ft ft";
+     column-gap: 0.5rem;
+}
+.el{
+    background-color: rebeccapurple;
+    color: #fff;
+    display: grid;
+    place-content: center;
+}
+.header{
+     grid-area: hd;
+}
+.sidebar{
+    grid-area: sb;
+    background-color: blue;
+}
+.footer{
+    grid-area: ft;
+}
+.container{
+    grid-area: mn;
+    min-height: 400px;
+    display: grid;
+    /* grid-auto-flow: column ; */
+    /* grid-template-columns: 200px 100px 200px; */
+      /* grid-template-columns: 2fr 1fr 1fr;first column becomes twice as big as 2nd 3rd,can also mix as 200px 1fr 1fr fr-fraction*/
+    grid-template-columns: repeat(2,1fr 2fr);/*2 columns are 1fr 2 are 2fr starting pattern is 1fr 2fr 1 fr 2fr*/
+    grid-auto-rows: minmax(150px,auto);
+    /* column-gap: 1em; */
+    gap: 1rem;
+}
+.box{
+ 
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+    
+}
+.box:first-child{
+    background-color: blue;
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; below is the shorthand*/
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    display: grid;
+    /* align-content: center;
+    justify-content: center; below is shorthand for it,justify-is horizontal phenomena*/
+     /* place-content: end center; below a shorthand for this also*/
+     place-content: center;
+}
+.box:nth-child(2){
+    background-color: purple;
+    grid-column: 1 / 5; 
+    grid-row: 3 / 4;
+}
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header el"><h1>Header</h1></header>
+   <main class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+   </main>
+    <aside class="sidebar el "><h2>Sidebar</h2></aside>
+</body>
+<footer class="footer el">Footer</footer>
+</html>

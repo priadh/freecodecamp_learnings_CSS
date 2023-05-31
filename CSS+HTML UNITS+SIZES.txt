@@ -1,0 +1,90 @@
+/* UNITS -they determine size of everything on pg*/
+/* html{
+    font-size: 32px;
+    above is absolute font size setting with pixels in it even if we change our chrome settings of font to very large the font size of our pg won't change bcz it is set to absolute so avoid it here,16px font size is default in browser ,avoid this
+
+
+} */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body{
+    no need to set width as 100 as it is that by default,but there is also a problem using 100vw width when vertical content outgrows the pg,to demonstrate add more  content in html document,now a scroll bar is on right but also a horizontal scroll bar appears which is irritating so use % instead so that there is no horizontal scroll bar but again there is no need to set width to 100% as it is by default
+   /* width:100vw;*/
+    /* width: 100%; */
+/* }  */
+main{
+    /* para prsent in main that is main is parent of para p but setting font-size in main won't affect p font-size:  bcz that is not relative to main but relative to root element or more specifically in accordance with browser */
+    font-size: 2rem;
+
+    /* vw-viewport width,width of para is more than width of our main element so the para overflows main element,here we set main to 50% of full pg width,even 50% will give same result as 50vw,% is better choice*/
+    /* width: 50vw;
+    background-color: skyblue; */
+
+}
+p{
+    /* instead of absolute size specification in html we specify font size for paras,here 1rem means 16px which is default for browsers ,rem refers to html element font-size which is root element and if not specified it refers to default browser font-size ,it does not hv any relation with parent element and it does not change with it*/
+   font-size: 2rem;
+
+   /*em referes to parent element and changes according to it,it is for amplifying here main is the parent element so it looks at it ,it sets 2rem that 32px font size thus 2em sets size to 64px,2em is used for other purpose like padding*/
+   /* font: size 2em;  */
+   
+   width: 40ch;/*WIDTH SETS WIDTH OF PARA ,HERE IT IS approx 40 CHARacterS PER LINE AND THE LINE WRAPS*/
+
+}
+
+body{
+    /* on inspecting,we found that body is not full size of pg it grows with content but we can set it to be full size of pg even if content is less as follows */
+    min-height: 100vh;
+    /* vh-view height */
+}
+
+/* header{ */
+    /*h1 is inside of header element,header is it's parent element,now we set header to take 50% width of pg so h1 will take 50% of this header that is h1 is 25% of pg,100% is default value that yo don't need to write header block for*/
+    /* width:50%; */
+/* } */
+h1{
+    /* here we use absolute size or pixels no matter what screen size is the border size remains same */
+   border: 2px dashed red;
+   width: 50%; /*sets border width*/
+   font-size: 3rem;
+   padding: 0.5em;
+   /* paddding is 0.5 of font-size:  i.e. 48px*0.5=24px */
+}
+  ........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>CSS Units</h1>
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laudantium exercitationem corporis quia
+            dolores esse enim? Necessitatibus quisquam, magni iste beatae earum et fugiat aut delectus porro voluptate,
+            praesentium totam?</p>
+            <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident mollitia, unde aut commodi, neque vero quos sapiente, maiores maxime delectus reiciendis facilis? Unde dignissimos quibusdam officia sunt voluptatibus debitis atque?</p>
+            <p>Non necessitatibus eligendi, provident esse, ut cumque, tempora veniam vitae quaerat deserunt nulla nam! Ab officia corrupti, veniam, asperiores, porro alias at facere aspernatur commodi reiciendis voluptatem repellendus reprehenderit eius.</p>
+            <p>Aliquid, explicabo enim dignissimos atque veniam consectetur voluptatum eligendi repudiandae reprehenderit ab excepturi error illo minima iure cupiditate obcaecati doloribus inventore exercitationem! Dicta assumenda ullam suscipit molestiae fugiat, quas aliquid!</p>
+            <p>Labore esse autem odit quod eaque, possimus quas nisi aliquam quos deserunt necessitatibus sunt eos eligendi molestias enim sint praesentium ad debitis suscipit laudantium beatae eveniet quia rerum. Porro, cupiditate?</p>
+            <p>Esse, blanditiis. Reiciendis inventore dolorum dolorem dolores. Consequatur cum suscipit pariatur nam quod, voluptas velit debitis, eligendi tempore quia ullam optio nihil corrupti ea at omnis quo aliquam labore laborum!</p>
+            <p>Similique error at eaque expedita numquam reprehenderit nostrum esse qui. Esse, sint ad illo consectetur commodi pariatur, deserunt ratione doloribus molestias dolor hic voluptas? Nobis quisquam illo enim exercitationem animi.</p>
+            <p>Sapiente eos sed nobis ea reiciendis dolore atque repudiandae, necessitatibus praesentium delectus quidem impedit commodi! Ducimus, hic. Voluptatum eligendi voluptatem amet corporis! Ad quisquam autem nostrum porro molestiae impedit delectus.</p>
+            <p>Ullam unde minima assumenda, excepturi blanditiis reprehenderit quos error sunt natus animi quidem quasi veritatis eos voluptatibus consectetur distinctio quas explicabo consequatur expedita doloremque adipisci. Odio esse molestias perferendis architecto?</p>
+            <p>Eligendi animi minima adipisci optio consectetur saepe incidunt ab nemo odio, aut sunt molestiae numquam sit earum placeat ipsam voluptas, debitis, eos officia expedita modi sint. Iure itaque dolorem sit?</p>
+            <p>Quidem laudantium nisi, dignissimos quos perspiciatis asperiores dolorem nesciunt optio ea aut quisquam! Odio ratione, perferendis fugit, qui amet perspiciatis quo tempore vitae voluptas maxime, corrupti molestias aperiam doloribus provident.</p> -->
+<!-- p*10>lorem press tab adds lorem text -->
+    </main>
+</body>
+
+</html>

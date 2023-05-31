@@ -1,0 +1,79 @@
+/*Typography is the way that text is arranged and presented*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+body{
+    padding: 10%;
+    /* this is inherited by child elements */
+    font-size: 2rem;/*form input and button has not inherited this font size,only label has*/
+    /* color:purple; */
+    font-family: 'Roboto', sans-serif;
+    /*serif is by default, now here we provide 3 choices 'Courier New', Courier, monospace so if one is not installed it in system it will look for 2nd font*/
+    
+}
+/* input,button{
+    /* font:inherit; */
+    /*inherit is used so it input,button will inherit the body font-size*/
+
+/* }  */
+
+p{
+    /* text-decoration: none;other options like overline.through line etc.,none is default for para text */
+    /* linktext are underlined by default so setting nuone would remove underline if u want */
+    
+    /* text-transform:uppercase; */
+    
+    /* text-align: left;left is by default for para can be left right justify*/
+    /* text-align: justify; */
+
+    /* text-indent:2em; indents first line  */
+
+    line-height: 1.5;/*default is 1.2,line height-space bw lines*/
+    /* letter-spacing: 0.1em;space bw alphabets */
+
+    /* word-spacing: 0.1em; */
+
+    /* font-weight: bolder; for bolding */
+    
+    font-style: normal;
+    /* oblique is stronger italic ,normal is non-italic*/
+
+}
+
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet"> -->
+    <!-- these are font links from google fonts,also put the font-family in css ,instead of this we can use @import and put it in our css stylesheet-->
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>CSS Typography</h1>
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laudantium exercitationem corporis quia
+            dolores esse enim? Necessitatibus quisquam, magni iste beatae earum et fugiat aut delectus porro voluptate,
+            praesentium totam?</p>
+
+        <!-- <form>
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="Your Name" />
+            <button>Submit</button>
+        </form> -->
+    </main>
+</body>
+
+</html>

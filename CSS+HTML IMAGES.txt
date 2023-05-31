@@ -1,0 +1,153 @@
+/*CSS IMAGES,use bigger img as it won't go blur if screen size increases*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+/*BEGIN RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+img{
+    display: block;
+}
+/*END RESET*/
+
+/*UTILITY CLASSES*/
+.nowrap{
+    white-space: nowrap;/*now I'm or whole i'm jane won't break meaninglessly*/
+}
+.offscreen{
+    position: absolute;
+    left: -10000px;/*figcaption gone*/
+}
+/*END UTILITY CLASSES*/
+
+body{
+    /* font-size: 1.5rem; */
+    font-family: "Nunito",sans-serif;
+    min-height: 100vh;
+   background-color: aliceblue;
+   /* background-image: linear-gradient(to left,steelblue,purple,white,cyan); */
+
+    background-image: url('img/bubbles.png'),linear-gradient(to left,steelblue,white);
+    /*gradient is bg image,u can hv more than one bg img*/
+
+    background-repeat: repeat-y,no-repeat;
+    /* 2 bcz repeat y(bubble is only on y axis) is for bubbles,no repeat is for gradient */
+
+    background-position: right center;
+    /*20% for bubbles,auto for gradient*/
+
+    /* background-repeat: repeat-y right center url('img/bubbles.png'),no-repeat linear-gradient(to left,steelblue,white); shorthand for above 3 lines of code*/
+    
+    background-size: 20%,auto; 
+
+
+}
+.container{
+    /*container is parent of hero*/
+    background-color: rgb(251,210,156);
+    background-image: url('img/map-2176x1451.png');
+    /*..img/ if img folder is out above*/
+
+    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;background img will be of default size it wont repeat to cover background it is reapeat by default */
+
+    background-position: top;/*if you want bottom right left top right left center of img visible specifically*/
+
+    background-size: cover;/*we see full img as bg of container,contains also repeats after covering it's orignal size*/
+}
+.hero{
+    border: 2px solid black;
+    padding:20px;
+    display:flex;/*flex is  row by default*/
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px;
+    
+    background-color: hsla(0, 0%, 100%, 0.35);/*since it child of container it darkens the img set by parent or filters img*/
+
+    
+    
+}
+.h1{
+    font-size: 500%;
+    color:aliceblue;
+    text-shadow: 2px 2px 5px black;/*x-axis y-axis blur color*/
+    /* background-color: hsla(0, 0%, 0%, 0.40);
+    padding: 0.25rem;
+    border-radius: 10px; */
+
+}
+.profile-pic-figure{
+    width: 35%; 
+
+
+}
+.profile-pic-figure img{
+          width: 100%;
+          height: auto;
+          min-width: 100px;
+          border: 5px double gray;
+          border-radius: 50%;
+}
+.example{
+    margin-top:1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+    /*img are inline elements so we change it's display to block*/
+}
+.example img{
+    width: 25%;/*25% of container size not img*/
+    height: auto;/*auto so that height responds to width*/
+    
+}
+.clip{
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image:url('img/scenic-2200x1331.png') ;
+    background-size: 100%;
+    text-transform: uppercase;
+    background-clip: text;/*put this and below 2 lines so that it works in all browsers,puts img in text*/
+    -webkit-background-clip: text;
+    color: hsla(0, 0%, 0%, 0.20);
+    /* color: transparent; */
+}
+..........................................................................................................................
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <!-- <div class="container"> -->
+        <!-- <section class="example"> ye section alg hai hai so isse alg commet kia-->
+            <!-- <p> -->
+                <!-- <img src="img/pat1.png" alt="Pattern 1" width="200" height="200" > -->
+                <!-- yeah this is a paragraph. -->
+            <!-- </p> -->
+        <!-- </section> -->
+        <!-- <section class="hero">
+            <figure class="profile-pic-figure">
+                <img src="img/profile-800x800.png" alt="Profile Picture" title="My profile picture" width="800" height="800">
+                <figcaption class="offscreen">Jane Doe</figcaption>
+            </figure>
+            <h1 class="h1"><span class="nowrap">Hello 👋</span>
+            <span class="nowrap">I'm Jane</span></h1>
+            
+        </section>
+    </div> --> 
+    <section>
+        <p class="clip">Jane</p>
+    </section>
+</body>
+
+</html>
